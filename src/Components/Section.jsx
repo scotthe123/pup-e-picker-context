@@ -1,14 +1,19 @@
+import { useDogList } from "../providers/DogListProvider";
+
 //! Get rid of all props except 'children' and 'label'
 export const Section = ({
   label, // do not delete
   children, // do not delete
-  onClickFavorited,
-  onClickUnfavorited,
-  onClickCreateDog,
-  showComponent,
-  favoriteDogCount,
-  unfavoriteDogCount,
 }) => {
+  const {
+    onClickFavorited,
+    onClickUnfavorited,
+    onClickCreateDog,
+    showComponent,
+    favoriteDogCount,
+    unfavoriteDogCount,
+  } = useDogList();
+
   return (
     <section>
       <div className="container-header">
